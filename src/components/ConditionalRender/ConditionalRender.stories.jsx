@@ -1,14 +1,6 @@
 import React from "react";
 import ConditionalRender from "./index";
 
-export default {
-	title: "ConditionalRender",
-	component: ConditionalRender,
-	argTypes: {
-		show: { control: "boolean" },
-	},
-};
-
 const Template = (args) => 
 	<>
 		Conditional child : - 
@@ -16,9 +8,21 @@ const Template = (args) =>
 			<span>Hello World</span>
 		</ConditionalRender>
 	</>;
+const GeneralProps = {
+	show: false,
+	children: null,
+};
+
+export default {
+	title: "Components/ConditionalRender",
+	component: ConditionalRender,
+	argTypes: {
+		show: { control: "boolean" },
+	},
+};
 
 export const Default = Template.bind({});
 
 Default.args = {
-	show: false
+	...GeneralProps,
 };
