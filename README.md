@@ -16,7 +16,8 @@ specificity, overriding styles. customisation
 * Customised - We can choose our standards and tailor to our requirements
 * Performance - With pre-built design systems, you often pull in a lot of features/ styles that you don't want and then have to add more layers to mould it how you want. Because this is customised, we can reduce the amount of unused code which will boost performance
 * Reduce specificity - Because this is customised and how we plan to build it, we don't need to try to override dtyles, reducing unexpected bugs/ developer frustration and allowing faster development.
-* Quality - We can take ownership of the code quality and accessibility
+* Contribution - Anyone should be able to contribute new components as its a modular set up with named exports
+* Quality - We can take ownership of the code quality and accessibility. Strong typing and linting will enforce a level of quality check, but it would be good to have a responsible maintainer.
 
 ## Technical Details
 
@@ -51,7 +52,7 @@ Encapsulated components, lift out without breaking
 
 ### Documentation
 
-Storybook
+Storybook, Typescript
 
 ### Made unpublished changes?
 
@@ -70,3 +71,8 @@ import { Button } from "component-library";
 ...
 <Button onClick={() => alert("That's all folks!")} label="Click me!" iconName="ThumbsUp" />
 ```
+
+### TODO:
+- serve up js and ts versions
+- AXE lint 
+- commit lint
